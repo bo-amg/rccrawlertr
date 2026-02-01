@@ -1,0 +1,21 @@
+{
+  "name": "rccrawlertr",
+  "version": "1.0.0",
+  "description": "RC Crawler TR - Turkiye'nin en kapsamli RC Crawler sitesi",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve",
+    "watch": "eleventy --watch",
+    "debug": "DEBUG=* eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bo-amg/rccrawlertr.git"
+  },
+  "keywords": ["rc", "crawler", "traxxas", "trx-4", "trx-6", "turkey"],
+  "author": "Ali Mert",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}

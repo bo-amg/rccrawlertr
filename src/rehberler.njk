@@ -1,0 +1,29 @@
+---
+layout: layouts/base.njk
+title: Rehberler
+---
+
+<div class="listing-page">
+    <div class="container">
+        <h1>RC Crawler Rehberleri</h1>
+        
+        <div class="articles-grid">
+            {% for rehber in collections.rehberler %}
+            <article class="article-card">
+                <div class="article-image">📚</div>
+                <div class="article-content">
+                    <span class="article-tag">Rehber</span>
+                    <h3><a href="{{ rehber.url }}">{{ rehber.data.title }}</a></h3>
+                    <p>{{ rehber.data.description }}</p>
+                    <p style="color: #999; font-size: 0.85rem;">{{ rehber.date | tarihFormat }}</p>
+                    <a href="{{ rehber.url }}" class="read-more">Devamini Oku →</a>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+        
+        {% if collections.rehberler.length == 0 %}
+        <p style="text-align: center; color: #666; padding: 3rem;">Henüz rehber eklenmemis. Yakinda guncel iceriklerle karsinizda olacagiz!</p>
+        {% endif %}
+    </div>
+</div>

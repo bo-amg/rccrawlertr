@@ -1,0 +1,72 @@
+---
+layout: layouts/base.njk
+title: Ana Sayfa
+---
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Turkiye'nin En Kapsamli RC Crawler Kaynagi</h1>
+        <p>Traxxas TRX-4, TRX-6 ve daha fazlasi. Detayli incelemeler, bakim rehberleri ve uzman tavsiyeleri ile RC crawler dunyasina adim atin.</p>
+        <a href="/incelemeler/" class="cta-button">Incelemelere Basla →</a>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="features">
+    <div class="container">
+        <h2 class="section-title">Neden RC Crawler TR?</h2>
+        <p class="section-subtitle">RC crawler hobisi icin aradiginiz tum bilgiler tek adreste</p>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">📋</div>
+                <h3>Detayli Incelemeler</h3>
+                <p>Traxxas, Axial ve daha fazlasi. Her modelin detayli teknik analizleri ve gercek kullanici deneyimleri.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🔧</div>
+                <h3>Bakim Rehberleri</h3>
+                <p>Adim adim bakim, temizlik ve modifiye rehberleri. RC crawler'inizin omrunu uzatin.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">⚖️</div>
+                <h3>Tarafsiz Karsilastirmalar</h3>
+                <p>Hangi model size daha uygun? TRX-4 mu yoksa TRX-6 mi? Objektif karsilastirmalar.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Latest Articles -->
+<section class="latest-articles">
+    <div class="container">
+        <h2 class="section-title">Son Incelemeler</h2>
+        <p class="section-subtitle">En yeni RC crawler incelemeleri ve rehberler</p>
+        
+        <div class="articles-grid">
+            {% for inceleme in collections.incelemeler | limit(3) %}
+            <article class="article-card">
+                <div class="article-image">🚙</div>
+                <div class="article-content">
+                    <span class="article-tag">Inceleme</span>
+                    <h3><a href="{{ inceleme.url }}">{{ inceleme.data.title }}</a></h3>
+                    <p>{{ inceleme.data.description }}</p>
+                    <a href="{{ inceleme.url }}" class="read-more">Devamini Oku →</a>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Partner Section -->
+<section class="partner-section">
+    <div class="container">
+        <h2>Guvenilir RC Urunleri Icin Tavsiyemiz</h2>
+        <p>Turkiye'nin onde gelen RC distributoru Buyuklere Oyuncaklar, resmi garanti ve yetkili servis hizmeti ile yaninizda. Traxxas, Horizon Hobby ve daha fazlasi.</p>
+        <a href="https://buyuklereoyuncaklar.com.tr" class="partner-button" target="_blank" rel="noopener">Buyuklere Oyuncaklar'i Ziyaret Et →</a>
+    </div>
+</section>

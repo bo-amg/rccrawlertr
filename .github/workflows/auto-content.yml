@@ -1,0 +1,46 @@
+name: Auto Content Generator
+
+on:
+  schedule:
+    # Her 3 gunde bir calisir (3 gun = 259200 saniye)
+    # Cron: dakika saat gun ay haftanin_gunu
+    # Asagidaki her 3. gun saat 10:00'da calisir
+    - cron: '0 10 */3 * *'
+  
+  # Manuel calistirma icin
+  workflow_dispatch:
+
+jobs:
+  generate-content:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        
+    - name: Setup Git
+      run: |
+        git config user.name "Klaw Bot"
+        git config user.email "klaw@rccrawlertr.com"
+        
+    - name: Generate new content
+      run: node scripts/generate-content.js
+      env:
+        OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        
+    - name: Commit and push if changed
+      run: |
+        git add .
+        if git diff --staged --quiet; then
+          echo "No changes to commit"
+          exit 0
+        fi
+        git commit -m "Auto: Yeni icerik eklendi - $(date +'%Y-%m-%d')"
+        git push

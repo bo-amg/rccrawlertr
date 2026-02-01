@@ -1,0 +1,18 @@
+---
+layout: layouts/base.njk
+---
+
+<div class="content-page">
+    <div class="container">
+        <article>
+            <h1>{{ title }}</h1>
+            <p class="meta">
+                <strong>Yayin Tarihi:</strong> {{ page.date | tarihFormat }}
+                {% if author %} | <strong>Yazar:</strong> {{ author }}{% endif %}
+                {% if tags %} | <strong>Etiketler:</strong> {{ tags | join(", ") }}{% endif %}
+            </p>
+            
+            {{ content | safe }}
+        </article>
+    </div>
+</div>

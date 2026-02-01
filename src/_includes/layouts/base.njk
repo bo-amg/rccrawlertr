@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if title %}{{ title }} | {% endif %}RC Crawler TR</title>
+    <meta name="description" content="{% if description %}{{ description }}{% else %}Turkiye'nin en kapsamli RC Crawler sitesi. Traxxas TRX-4, TRX-6 incelemeleri, bakim rehberleri ve karsilastirmalar.{% endif %}">
+    <meta name="keywords" content="{% if keywords %}{{ keywords }}{% else %}rc crawler, traxxas trx-4, traxxas trx-6, rc araba, rc crawler bakim{% endif %}">
+    <meta name="author" content="RC Crawler TR">
+    <meta property="og:title" content="{% if title %}{{ title }}{% else %}RC Crawler TR - En Iyi RC Crawler Modelleri{% endif %}">
+    <meta property="og:description" content="{% if description %}{{ description }}{% else %}Turkiye'nin en kapsamli RC Crawler sitesi{% endif %}">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://rccrawlertr.com{{ page.url }}">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    {% include "header.njk" %}
+    
+    <main>
+        {{ content | safe }}
+    </main>
+    
+    {% include "footer.njk" %}
+    
+    <script src="/js/main.js"></script>
+</body>
+</html>

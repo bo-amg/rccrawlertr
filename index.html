@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RC Crawler TR - En İyi RC Crawler Modelleri ve İncelemeler</title>
+    <meta name="description" content="Türkiye'nin en kapsamlı RC Crawler sitesi. Traxxas TRX-4, TRX-6 incelemeleri, bakım rehberleri ve karşılaştırmalar.">
+    <meta name="keywords" content="rc crawler, traxxas trx-4, traxxas trx-6, rc araba, rc crawler bakım, en iyi rc crawler">
+    <meta name="author" content="RC Crawler TR">
+    <meta property="og:title" content="RC Crawler TR - En İyi RC Crawler Modelleri">
+    <meta property="og:description" content="Türkiye'nin en kapsamlı RC Crawler sitesi">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://rccrawlertr.com/">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+        
+        /* Header ve Navigasyon */
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+        
+        .logo-text span {
+            color: #4CAF50;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+        
+        nav a:hover {
+            opacity: 0.8;
+        }
+        
+        .mobile-menu {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #1e3c72 100%);
+            color: white;
+            padding: 5rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,50 Q25,30 50,50 T100,50 L100,100 L0,100 Z" fill="rgba(255,255,255,0.05)"/></svg>');
+            background-size: 100% auto;
+            background-position: bottom;
+            background-repeat: no-repeat;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #4CAF50;
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4);
+        }
+        
+        .cta-button:hover {
+            background: #45a049;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(76, 175, 80, 0.5);
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 4rem 0;
+            background: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1e3c72;
+            margin-bottom: 1rem;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .feature-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 16px;
+            text-align: center;
+            transition: all 0.3s;
+            border: 1px solid #e9ecef;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.25rem;
+            color: #1e3c72;
+            margin-bottom: 0.5rem;
+        }
+        
+        .feature-card p {
+            color: #666;
+        }
+        
+        /* Latest Articles */
+        .latest-articles {
+            padding: 4rem 0;
+            background: #f8f9fa;
+        }
+        
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .article-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+        }
+        
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+        }
+        
+        .article-image {
+            height: 200px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+        
+        .article-content {
+            padding: 1.5rem;
+        }
+        
+        .article-tag {
+            display: inline-block;
+            background: #e3f2fd;
+            color: #1976d2;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+        
+        .article-card h3 {
+            font-size: 1.25rem;
+            color: #1e3c72;
+            margin-bottom: 0.75rem;
+            line-height: 1.4;
+        }
+        
+        .article-card p {
+            color: #666;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+        
+        .read-more {
+            color: #2a5298;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .read-more:hover {
+            color: #1e3c72;
+        }
+        
+        /* Partner Section */
+        .partner-section {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .partner-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .partner-section p {
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+        
+        .partner-button {
+            display: inline-block;
+            background: #4CAF50;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .partner-button:hover {
+            background: #45a049;
+            transform: translateY(-2px);
+        }
+        
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h4 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: #4CAF50;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section a {
+            color: #aaa;
+            text-decoration: none;
+            line-height: 2;
+            transition: color 0.3s;
+        }
+        
+        .footer-section a:hover {
+            color: white;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: 2rem;
+            text-align: center;
+            color: #666;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-wrap: wrap;
+            }
+            
+            nav {
+                display: none;
+                width: 100%;
+                margin-top: 1rem;
+            }
+            
+            nav.active {
+                display: block;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .features-grid,
+            .articles-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="/" class="logo">
+                <div class="logo-icon">🏔️</div>
+                <div class="logo-text">RC Crawler<span>TR</span></div>
+            </a>
+            <button class="mobile-menu" onclick="toggleMenu()">☰</button>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="/">Ana Sayfa</a></li>
+                    <li><a href="/incelemeler/">İncelemeler</a></li>
+                    <li><a href="/rehberler/">Rehberler</a></li>
+                    <li><a href="/karsilastirmalar/">Karşılaştırmalar</a></li>
+                    <li><a href="/tavsiyeler/">Tavsiyeler</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Türkiye'nin En Kapsamlı RC Crawler Kaynağı</h1>
+            <p>Traxxas TRX-4, TRX-6 ve daha fazlası. Detaylı incelemeler, bakım rehberleri ve uzman tavsiyeleri ile RC crawler dünyasına adım atın.</p>
+            <a href="/incelemeler/traxxas-trx-4-inceleme.html" class="cta-button">İncelemelere Başla →</a>
+        </div>
+    </section>
+    
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Neden RC Crawler TR?</h2>
+            <p class="section-subtitle">RC crawler hobisi için aradığınız tüm bilgiler tek adreste</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📋</div>
+                    <h3>Detaylı İncelemeler</h3>
+                    <p>Traxxas, Axial ve daha fazlası. Her modelin detaylı teknik analizleri ve gerçek kullanıcı deneyimleri.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🔧</div>
+                    <h3>Bakım Rehberleri</h3>
+                    <p>Adım adım bakım, temizlik ve modifiye rehberleri. RC crawler'ınızın ömrünü uzatın.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⚖️</div>
+                    <h3>Tarafsız Karşılaştırmalar</h3>
+                    <p>Hangi model size daha uygun? TRX-4 mü yoksa TRX-6 mı? Objektif karşılaştırmalar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Latest Articles -->
+    <section class="latest-articles">
+        <div class="container">
+            <h2 class="section-title">Son İncelemeler</h2>
+            <p class="section-subtitle">En yeni RC crawler incelemeleri ve rehberler</p>
+            
+            <div class="articles-grid">
+                <article class="article-card">
+                    <div class="article-image">🚙</div>
+                    <div class="article-content">
+                        <span class="article-tag">İnceleme</span>
+                        <h3>Traxxas TRX-4 Land Rover Defender İnceleme</h3>
+                        <p>Uzaktan kumandalı kilitli diferansiyel, iki kademeli şanzıman ve gerçekçi Land Rover gövdesi ile TRX-4'ü detaylı inceliyoruz.</p>
+                        <a href="/incelemeler/traxxas-trx-4-land-rover-defender.html" class="read-more">Devamını Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="article-card">
+                    <div class="article-image">🏔️</div>
+                    <div class="article-content">
+                        <span class="article-tag">Rehber</span>
+                        <h3>RC Crawler Başlangıç Rehberi 2024</h3>
+                        <p>RC crawler dünyasına yeni mi adım atıyorsunuz? İhtiyacınız olan tüm bilgiler, bütçe planlaması ve ilk model önerileri.</p>
+                        <a href="/rehberler/rc-crawler-baslangic-rehberi.html" class="read-more">Devamını Oku →</a>
+                    </div>
+                </article>
+                
+                <article class="article-card">
+                    <div class="article-image">⚡</div>
+                    <div class="article-content">
+                        <span class="article-tag">Karşılaştırma</span>
+                        <h3>TRX-4 vs TRX-6: Hangisi Daha İyi?</h3>
+                        <p>İki efsanevi model karşı karşıya. Teknik özellikler, performans ve fiyat-performans açısından detaylı karşılaştırma.</p>
+                        <a href="/karsilastirmalar/trx-4-vs-trx-6.html" class="read-more">Devamını Oku →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Partner Section -->
+    <section class="partner-section">
+        <div class="container">
+            <h2>Güvenilir RC Ürünleri İçin Tavsiyemiz</h2>
+            <p>Türkiye'nin önde gelen RC distribütörü Büyüklere Oyuncaklar, resmi garanti ve yetkili servis hizmeti ile yanınızda. Traxxas, Horizon Hobby ve daha fazlası.</p>
+            <a href="https://buyuklereoyuncaklar.com.tr" class="partner-button" target="_blank" rel="noopener">Büyüklere Oyuncaklar'ı Ziyaret Et →</a>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>RC Crawler TR</h4>
+                    <p style="color: #aaa; line-height: 1.8;">Türkiye'nin en kapsamlı RC crawler kaynağı. Detaylı incelemeler, bakım rehberleri ve uzman tavsiyeleri.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Hızlı Bağlantılar</h4>
+                    <ul>
+                        <li><a href="/incelemeler/">İncelemeler</a></li>
+                        <li><a href="/rehberler/">Rehberler</a></li>
+                        <li><a href="/karsilastirmalar/">Karşılaştırmalar</a></li>
+                        <li><a href="/tavsiyeler/">Tavsiyeler</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Popüler İçerikler</h4>
+                    <ul>
+                        <li><a href="/incelemeler/traxxas-trx-4-land-rover-defender.html">TRX-4 Land Rover</a></li>
+                        <li><a href="/rehberler/rc-crawler-bakim-rehberi.html">Bakım Rehberi</a></li>
+                        <li><a href="/tavsiyeler/en-iyi-rc-crawler-2024.html">En İyi RC Crawler</a></li>
+                        <li><a href="/karsilastirmalar/trx-4-vs-trx-6.html">TRX-4 vs TRX-6</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>İş Ortaklarımız</h4>
+                    <ul>
+                        <li><a href="https://buyuklereoyuncaklar.com.tr" target="_blank" rel="noopener">Büyüklere Oyuncaklar</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2024 RC Crawler TR. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        function toggleMenu() {
+            document.getElementById('mainNav').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

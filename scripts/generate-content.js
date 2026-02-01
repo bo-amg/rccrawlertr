@@ -30,6 +30,72 @@ const contentIdeas = {
       description: "Element RC'nin populer modeli. Stealth X gearbox ve detayli inceleme.",
       tags: ["element", "enduro", "sendero", "inceleme"],
       keywords: "element rc enduro, sendero, stealth x"
+    },
+    {
+      title: "Vanquish VS4-10 Phoenix Inceleme",
+      description: "Yuksek performansli竞赛级 crawler. Karbon fiber ve aliminyum yapisi.",
+      tags: ["vanquish", "vs4-10", "phoenix", "inceleme", "premium"],
+      keywords: "vanquish vs4-10, phoenix crawler, yarismalik rc"
+    },
+    {
+      title: "Traxxas TRX-4 Bronco Inceleme",
+      description: "Ford Bronco govdesi ile gelen TRX-4 versiyonu. Klasik off-road gorunumu.",
+      tags: ["traxxas", "trx-4", "bronco", "ford", "inceleme"],
+      keywords: "traxxas trx-4 bronco, ford bronco rc, klasik offroad"
+    },
+    {
+      title: "Axial SCX24 Jeep Wrangler Inceleme",
+      description: "1/24 olcekli mini crawler. Ic mekan kullanimi icin ideal.",
+      tags: ["axial", "scx24", "jeep", "mini", "inceleme"],
+      keywords: "axial scx24, mini crawler, 124 olcek rc"
+    },
+    {
+      title: "Kyosho Mini-Z 4x4 Jeep Wrangler Inceleme",
+      description: "Japon teknolojisi ile uretilmis detayli mini crawler.",
+      tags: ["kyosho", "mini-z", "jeep", "mini", "inceleme"],
+      keywords: "kyosho mini-z, 4x4 mini crawler, japon rc"
+    },
+    {
+      title: "FMS FCX24 Power Wagon Inceleme",
+      description: "Retro gorunumlu mini crawler. Detayli govde ve led aydinlatma.",
+      tags: ["fms", "fcx24", "power-wagon", "mini", "inceleme"],
+      keywords: "fms fcx24, power wagon, retro crawler"
+    },
+    {
+      title: "Traxxas TRX-6 Mercedes G63 AMG 6x6 Inceleme",
+      description: "6 tekerlekli dev. TRX-6'nin teknik detaylari ve performansi.",
+      tags: ["traxxas", "trx-6", "mercedes", "g63", "6x6", "inceleme"],
+      keywords: "traxxas trx-6, mercedes g63 amg 6x6, 6x6 rc"
+    },
+    {
+      title: "Redcat Everest Gen7 Pro Inceleme",
+      description: "Ucuz segmentte profesyonel ozellikler. Everest serisinin amiral gemisi.",
+      tags: ["redcat", "everest", "gen7", "pro", "inceleme"],
+      keywords: "redcat everest gen7, pro model, uygun fiyatli crawler"
+    },
+    {
+      title: "GMade GS01 Komodo Inceleme",
+      description: "Kore teknolojisi ile uretilmis dayanikli ve gercekci crawler.",
+      tags: ["gmade", "gs01", "komodo", "inceleme"],
+      keywords: "gmade gs01, komodo crawler, kore rc"
+    },
+    {
+      title: "HPI Venture FJ Cruiser Inceleme",
+      description: "Toyota FJ Cruiser govdesi ile gelen yeni nesil crawler.",
+      tags: ["hpi", "venture", "fj-cruiser", "toyota", "inceleme"],
+      keywords: "hpi venture, fj cruiser, toyota rc crawler"
+    },
+    {
+      title: "Losi Night Crawler SE Inceleme",
+      description: "Yarismalik performans arayanlar icin yuksek kaliteli crawler.",
+      tags: ["losi", "night-crawler", "se", "yarisma", "inceleme"],
+      keywords: "losi night crawler, yarisma crawler, performans"
+    },
+    {
+      title: "Tamiya CC-02 Mercedes G500 Inceleme",
+      description: "Klasik Tamiya kalitesi ile modern crawler teknolojisinin birlesimi.",
+      tags: ["tamiya", "cc-02", "mercedes", "g500", "inceleme"],
+      keywords: "tamiya cc-02, mercedes g500, klasik crawler"
     }
   ],
   
@@ -57,6 +123,54 @@ const contentIdeas = {
       description: "Hangi parcalari once upgrade etmelisiniz? Islevselden estetige dogru yol haritasi.",
       tags: ["rehber", "modifiye", "upgrade", "parca"],
       keywords: "rc crawler modifiye, upgrade, tuning"
+    },
+    {
+      title: "RC Crawler Lastik Secimi ve Bakimi",
+      description: "Farkli zeminler icin dogru lastik secimi. Lastik bakimi ve omrunu uzatma ipuclari.",
+      tags: ["rehber", "lastik", "bakim", "zemin"],
+      keywords: "rc crawler lastik, lastik secimi, zemin tipi"
+    },
+    {
+      title: "RC Crawler Fircasiz Motor Rehberi",
+      description: "Kv degeri nedir? Hangi motor sizin icin uygun? Fircasiz motor secimi.",
+      tags: ["rehber", "motor", "fircasiz", "elektronik"],
+      keywords: "rc crawler motor, fircasiz motor, kv degeri"
+    },
+    {
+      title: "RC Crawler Vites Kutusu Bakimi",
+      description: "Iki kademeli sanziman bakimi. Yag degisimi ve disli ayarlari.",
+      tags: ["rehber", "sanziman", "vites", "bakim"],
+      keywords: "rc crawler sanziman, vites kutusu, bakim"
+    },
+    {
+      title: "RC Crawler Diferansiyel Ayarlari",
+      description: "Kilitli diferansiyel nasil calisir? Zorlu arazi icin ayar onerileri.",
+      tags: ["rehber", "diferansiyel", "kilitli", "ayar"],
+      keywords: "rc crawler diferansiyel, kilitli diff, arazi ayari"
+    },
+    {
+      title: "RC Crawler Gorev Sasi Hazirlama",
+      description: "Scale gorunumlu crawler icin govde secimi ve detaylandirma.",
+      tags: ["rehber", "govde", "scale", "gorev"],
+      keywords: "rc crawler govde, scale gorunum, sasi hazirlama"
+    },
+    {
+      title: "RC Crawler Kaya Tirmanisi Teknikleri",
+      description: "Zorlu kayalik arazide ilerleme teknikleri. Dengenizi koruyun.",
+      tags: ["rehber", "kaya", "tirmanis", "teknik"],
+      keywords: "rc crawler kaya tirmanis, tirmanis teknik, arazi"
+    },
+    {
+      title: "RC Crawler LED Aydinlatma Kurulumu",
+      description: "Gercekci gorunum icin far, stop ve icki aydinlatma sistemi kurulumu.",
+      tags: ["rehber", "led", "aydinlatma", "elektronik"],
+      keywords: "rc crawler led, far kurulumu, aydinlatma sistemi"
+    },
+    {
+      title: "RC Crawler Su Gecirmezlik Rehberi",
+      description: "Elektronik komponentleri koruma yontemleri. Ipli su gecirmezlik.",
+      tags: ["rehber", "su", "gecirmezlik", "koruma"],
+      keywords: "rc crawler su gecirmezlik, elektronik koruma, ip67"
     }
   ],
   
@@ -78,6 +192,60 @@ const contentIdeas = {
       description: "Motor boyutlarinin performansa etkisi. Hangi tur kullanim icin hangisi ideal?",
       tags: ["karsilastirma", "motor", "540", "550", "elektronik"],
       keywords: "540 vs 550 motor, rc motor secimi, crawler motor"
+    },
+    {
+      title: "Kilitli Diferansiyel vs Normal: Farklar ve Avantajlar",
+      description: "Zorlu arazi sartlarinda hangisi daha iyi performans gosteriyor?",
+      tags: ["karsilastirma", "diferansiyel", "kilitli", "performans"],
+      keywords: "kilitli diferansiyel, normal diff, arazi performans"
+    },
+    {
+      title: "SCX24 vs FCX24: Mini Crawler Karsilastirmasi",
+      description: "1/24 olcekli mini crawler'lar karsilasiyor. Hangisi daha iyi?",
+      tags: ["karsilastirma", "mini", "scx24", "fcx24", "124"],
+      keywords: "scx24 vs fcx24, mini crawler karsilastirma, 124 olcek"
+    },
+    {
+      title: "Traxxas vs Axial: Marka Karsilastirmasi",
+      description: "Iki dev markanin avantajlari ve dezavantajlari. Hangisi sizin icin uygun?",
+      tags: ["karsilastirma", "traxxas", "axial", "marka"],
+      keywords: "traxxas vs axial, marka karsilastirma, rc markalari"
+    },
+    {
+      title: "LiPo vs NiMH: Batarya Karsilastirmasi",
+      description: "Hangi batarya teknolojisi daha uygun? Guvenlik, performans ve fiyat acisindan.",
+      tags: ["karsilastirma", "batarya", "lipo", "nimh"],
+      keywords: "lipo vs nimh, batarya teknolojisi, rc guc"
+    },
+    {
+      title: "TRX-4 vs TRX-6: Hangisini Almalisiniz?",
+      description: "4 tekerlek mi 6 tekerlek mi? Ihtiyaclariniza gore dogru secim.",
+      tags: ["karsilastirma", "traxxas", "trx-4", "trx-6", "6x6"],
+      keywords: "trx-4 vs trx-6, traxxas karsilastirma, 4x4 vs 6x6"
+    },
+    {
+      title: "Analog vs Digital Servo: RC Crawler Icin Hangisi?",
+      description: "Direksiyon tepkisi ve guc acisindan servo karsilastirmasi.",
+      tags: ["karsilastirma", "servo", "analog", "digital"],
+      keywords: "analog vs digital servo, rc servo, direksiyon"
+    },
+    {
+      title: "1/10 vs 1/24 Olcek: Hangisi Size Uygun?",
+      description: "Buyuk crawler mi mini crawler mi? Kullanim alanlarina gore karsilastirma.",
+      tags: ["karsilastirma", "olcek", "110", "124", "mini"],
+      keywords: "110 vs 124 olcek, buyuk vs mini crawler, olcek karsilastirma"
+    },
+    {
+      title: "Portal Aks vs Normal Aks: Performans Farki",
+      description: "Yuksek yerden aciklik ve tork avantajlari. Hangisi daha iyi?",
+      tags: ["karsilastirma", "portal", "aks", "performans"],
+      keywords: "portal aks vs normal, yuksek aciklik, tork"
+    },
+    {
+      title: "Redcat vs Element RC: Ekonomik Marka Karsilastirmasi",
+      description: "Ucuz segmentte iki populer markanin detayli karsilastirmasi.",
+      tags: ["karsilastirma", "redcat", "element", "ekonomik"],
+      keywords: "redcat vs element rc, ekonomik marka, ucuz crawler"
     }
   ],
   
@@ -99,6 +267,60 @@ const contentIdeas = {
       description: "Farkli zeminler icin en uygun RC crawler lastikleri. Marka ve model tavsiyeleri.",
       tags: ["tavsiye", "lastik", "kaya", "tirmanis", "yedek parca"],
       keywords: "rc crawler lastik, kaya tirmanis, en iyi lastik"
+    },
+    {
+      title: "Premium Segment RC Crawler Tavsiyeleri",
+      description: "10000TL uzeri bütce ile alinabilecek en iyi profesyonel modeller.",
+      tags: ["tavsiye", "premium", "profesyonel", "yuksek bütce"],
+      keywords: "premium rc crawler, profesyonel model, yuksek bütce"
+    },
+    {
+      title: "Cocuklar Icin En Iyi RC Crawler Modelleri",
+      description: "Güvenli ve dayanikli. Cocuklar icin uygun baslangic modelleri.",
+      tags: ["tavsiye", "cocuk", "baslangic", "guvenli"],
+      keywords: "cocuk rc crawler, baslangic model, guvenli"
+    },
+    {
+      title: "Yarismalik RC Crawler Tavsiyeleri",
+      description: "Competition seviyesinde yarismalar icin en iyi modeller ve upgrade onerileri.",
+      tags: ["tavsiye", "yarisma", "competition", "performans"],
+      keywords: "yarisma rc crawler, competition, performans model"
+    },
+    {
+      title: "Scale Gorunumlu RC Crawler Tavsiyeleri",
+      description: "Gercekci gorunum sevenler icin en detayli scale modeller.",
+      tags: ["tavsiye", "scale", "gercekci", "detay"],
+      keywords: "scale rc crawler, gercekci gorunum, detayli model"
+    },
+    {
+      title: "Ikinci El RC Crawler Alma Tavsiyeleri",
+      description: "Sahibinden alirken nelere dikkat etmeli? Kontrol listesi ve pazarlik ipuclari.",
+      tags: ["tavsiye", "ikinci el", "sahibinden", "alim"],
+      keywords: "ikinci el rc crawler, sahibinden, alim tavsiye"
+    },
+    {
+      title: "Kis Aylari Icin RC Crawler Onerileri",
+      description: "Soguk hava ve islak zeminler icin uygun modeller ve bakim ipuclari.",
+      tags: ["tavsiye", "kis", "soguk", "islak zemin"],
+      keywords: "kis rc crawler, soguk hava, islak zemin"
+    },
+    {
+      title: "Ic Mekan Icin Mini RC Crawler Tavsiyeleri",
+      description: "Evde kullanim icin ideal 1/24 olcekli mini crawler modelleri.",
+      tags: ["tavsiye", "mini", "ic mekan", "ev"],
+      keywords: "mini rc crawler, ic mekan, ev kullanim, 124 olcek"
+    },
+    {
+      title: "RC Crawler Icin En Iyi Kamera Sistemleri",
+      description: "FPV surus icin aksiyon kamera ve verici tavsiyeleri.",
+      tags: ["tavsiye", "kamera", "fpv", "sistem"],
+      keywords: "rc crawler kamera, fpv surus, aksiyon kamera"
+    },
+    {
+      title: "RC Crawler Icin En Iyi Yan Ekipmanlar",
+      description: "Kanca, halat, kurtarma krikosu gibi scale ekipman tavsiyeleri.",
+      tags: ["tavsiye", "ekipman", "scale", "aksesuar"],
+      keywords: "rc crawler ekipman, scale aksesuar, kanca halat"
     }
   ]
 };

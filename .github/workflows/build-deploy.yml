@@ -26,9 +26,7 @@ jobs:
           node-version: '18'
           
       - name: Install dependencies
-        run: |
-          npm config set registry https://registry.npmjs.org/
-          npm install --verbose
+        run: npm install
         
       - name: Build site
         run: npm run build

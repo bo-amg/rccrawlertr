@@ -39,9 +39,6 @@ module.exports = function(eleventyConfig) {
     });
   });
 
-  // Markdown dosyaları için .html uzantılı permalink (rccrawlertr prefix ile)
-  eleventyConfig.addGlobalData("permalink", "/rccrawlertr/{{ page.filePathStem }}.html");
-
   return {
     dir: {
       input: "src",

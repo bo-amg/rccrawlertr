@@ -1,5 +1,5 @@
 ---
-permalink: "/rccrawlertr/karsilastirmalar.html"
+permalink: "/karsilastirmalar.html"
 layout: layouts/base.njk
 title: Karsilastirmalar
 ---
@@ -14,10 +14,10 @@ title: Karsilastirmalar
                 <div class="article-image">⚖️</div>
                 <div class="article-content">
                     <span class="article-tag">Karsilastirma</span>
-                    <h3><a href="/rccrawlertr{{ karsilastirma.url }}">{{ karsilastirma.data.title }}</a></h3>
+                    <h3><a href="{{ karsilastirma.url }}">{{ karsilastirma.data.title }}</a></h3>
                     <p>{{ karsilastirma.data.description }}</p>
                     <p style="color: #999; font-size: 0.85rem;">{{ karsilastirma.date | tarihFormat }}</p>
-                    <a href="/rccrawlertr{{ karsilastirma.url }}" class="read-more">Devamini Oku →</a>
+                    <a href="{{ karsilastirma.url }}" class="read-more">Devamini Oku →</a>
                 </div>
             </article>
             {% endfor %}

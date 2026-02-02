@@ -3,7 +3,7 @@ pagination:
   data: collections.incelemeler
   size: 10
   alias: incelemeler
-permalink: "/incelemeler/{% if pagination.pageNumber > 0 %}sayfa-{{ pagination.pageNumber + 1 }}/{% endif %}index.html"
+permalink: "/rccrawlertr/incelemeler/{% if pagination.pageNumber > 0 %}sayfa-{{ pagination.pageNumber + 1 }}/{% endif %}index.html"
 layout: layouts/base.njk
 title: Incelemeler
 ---
@@ -18,10 +18,10 @@ title: Incelemeler
                 <div class="article-image">🚙</div>
                 <div class="article-content">
                     <span class="article-tag">Inceleme</span>
-                    <h3><a href="{{ inceleme.url }}">{{ inceleme.data.title }}</a></h3>
+                    <h3><a href="/rccrawlertr{{ inceleme.url }}">{{ inceleme.data.title }}</a></h3>
                     <p>{{ inceleme.data.description }}</p>
                     <p style="color: #999; font-size: 0.85rem;">{{ inceleme.date | tarihFormat }}</p>
-                    <a href="{{ inceleme.url }}" class="read-more">Devamini Oku →</a>
+                    <a href="/rccrawlertr{{ inceleme.url }}" class="read-more">Devamini Oku →</a>
                 </div>
             </article>
             {% endfor %}
@@ -30,11 +30,11 @@ title: Incelemeler
         {% if pagination.pages.length > 1 %}
         <nav style="text-align: center; margin-top: 3rem;">
             {% if pagination.href.previous %}
-            <a href="{{ pagination.href.previous }}" class="cta-button" style="margin-right: 1rem;">← Onceki Sayfa</a>
+            <a href="/rccrawlertr{{ pagination.href.previous }}" class="cta-button" style="margin-right: 1rem;">← Onceki Sayfa</a>
             {% endif %}
             
             {% if pagination.href.next %}
-            <a href="{{ pagination.href.next }}" class="cta-button">Sonraki Sayfa →</a>
+            <a href="/rccrawlertr{{ pagination.href.next }}" class="cta-button">Sonraki Sayfa →</a>
             {% endif %}
         </nav>
         {% endif %}

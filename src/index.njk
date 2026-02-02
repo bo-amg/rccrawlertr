@@ -52,9 +52,9 @@ title: Ana Sayfa
                 <div class="article-image">🚙</div>
                 <div class="article-content">
                     <span class="article-tag">Inceleme</span>
-                    <h3><a href="/rccrawlertr{{ inceleme.url }}">{{ inceleme.data.title }}</a></h3>
+                    <h3><a href="{{ inceleme.url }}">{{ inceleme.data.title }}</a></h3>
                     <p>{{ inceleme.data.description }}</p>
-                    <a href="/rccrawlertr{{ inceleme.url }}" class="read-more">Devamini Oku →</a>
+                    <a href="{{ inceleme.url }}" class="read-more">Devamini Oku →</a>
                 </div>
             </article>
             {% endfor %}

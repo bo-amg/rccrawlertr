@@ -39,6 +39,9 @@ module.exports = function(eleventyConfig) {
     });
   });
 
+  // Global permalink ayarı - tüm dosyalar /rccrawlertr/ altında
+  eleventyConfig.addGlobalData("permalink", "/rccrawlertr/{{ page.filePathStem }}.html");
+
   return {
     dir: {
       input: "src",

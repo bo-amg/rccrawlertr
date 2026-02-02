@@ -1,5 +1,5 @@
 ---
-permalink: "/rehberler.html"
+permalink: "/rccrawlertr/rehberler.html"
 layout: layouts/base.njk
 title: Rehberler
 ---
@@ -14,10 +14,10 @@ title: Rehberler
                 <div class="article-image">📚</div>
                 <div class="article-content">
                     <span class="article-tag">Rehber</span>
-                    <h3><a href="{{ rehber.url }}">{{ rehber.data.title }}</a></h3>
+                    <h3><a href="/rccrawlertr{{ rehber.url }}">{{ rehber.data.title }}</a></h3>
                     <p>{{ rehber.data.description }}</p>
                     <p style="color: #999; font-size: 0.85rem;">{{ rehber.date | tarihFormat }}</p>
-                    <a href="{{ rehber.url }}" class="read-more">Devamini Oku →</a>
+                    <a href="/rccrawlertr{{ rehber.url }}" class="read-more">Devamini Oku →</a>
                 </div>
             </article>
             {% endfor %}

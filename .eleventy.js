@@ -46,6 +46,7 @@ module.exports = function(eleventyConfig) {
       includes: "_includes"
     },
     templateFormats: ["md", "njk", "html"],
-    markdownTemplateEngine: "njk"
+    markdownTemplateEngine: "njk",
+    pathPrefix: "/rccrawlertr/"
   };
 };

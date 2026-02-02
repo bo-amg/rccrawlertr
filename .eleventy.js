@@ -13,6 +13,11 @@ module.exports = function(eleventyConfig) {
     });
   });
 
+  // Limit filtresi (array'den ilk N eleman)
+  eleventyConfig.addFilter("limit", (array, limit) => {
+    return array.slice(0, limit);
+  });
+
   // Koleksiyon: İncelemeler
   eleventyConfig.addCollection("incelemeler", function(collectionApi) {
     return collectionApi.getFilteredByGlob("src/incelemeler/*.md").sort((a, b) => {
